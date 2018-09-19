@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    display: inline-grid;
+    min-width: 30vw;
+  }
+  .box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    flex-direction: column;
+    display: flex;
+    flex-flow: wrap;
+    margin: 1px;
+  }
+  .list {
+    list-style: none;
+    padding: 10px;
+    background: #ddd;
+    width: 100%;
+    flex-flow: wrap;
+    display: flex;
+    margin: 2px;
+  }
+</style>
+<body>
+  <input type='text' id='command' />
+  <button onclick="enterCommand()" id='submitButton'>Submit</button>
+  <p id='content'>
+    <section class="container">
+      <div ondragover="allowDrop(event)" ondrop="dropList(event)" id="todo">
+        <h2>Todo</h2>
+        <div>
+          <ul class="box" id='boxTodo'>
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div ondragover="allowDrop(event)" ondrop="dropList(event)" id="Progress">
+        <h2>Progress</h2>
+        <div>
+          <ul class="box" id='boxOnprogress'>
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div ondragover="allowDrop(event)" ondrop="dropList(event)" id="Complete">
+        <h2>Complete</h2>
+        <div>
+          <ul class="box" id='boxComplete'>
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+  </p>
+</body>
+<script src="script.js"></script>
+</html>
