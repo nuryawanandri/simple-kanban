@@ -28,10 +28,14 @@
 <body>
   <input type='text' id='command' />
   <button onclick="enterCommand()" id='submitButton'>Submit</button>
+  <div>Commands : </div>
+  <div>create(space)"Your Task"</div>
+  <div>move(space)your_id_task(space)destination_kanban_name</div>
+  <div>remove(space)your_id_task(space)</div>
   <p id='content'>
     <section class="container">
       <div ondragover="allowDrop(event)" ondrop="dropList(event)" id="todo">
-        <h2>Todo</h2>
+        <h2>todo</h2>
         <div>
           <ul class="box" id='boxTodo'>
             
